@@ -26,8 +26,6 @@ const setWidth = (element, value) =>
 // Declaring variables
 let num = randomNumber();
 
-// console.log(num); // Remove -- for testing only!
-
 // Do I really need to cast score and highScore as numbers? Will work either way
 let score = Number(document.querySelector('.score').textContent); // 20 (start)
 const startScore = score;
@@ -81,7 +79,6 @@ document.querySelector('.check').addEventListener('click', function () {
       setTextContent('.number', num);
 
       // Expand width of the number box
-      // document.querySelector('.number').style.width = '30rem';
       setWidth('.number', '30rem');
 
       return;
@@ -108,11 +105,9 @@ document.querySelector('.check').addEventListener('click', function () {
     }
 
     // Change background to green (#60b347);
-    // document.querySelector('body').style.backgroundColor = '#60b347';
     setBackgroundColor('body', '#60b347');
 
     // Expand width of the number box
-    // document.querySelector('.number').style.width = '30rem';
     setWidth('.number', '30rem');
   }
 });
@@ -129,8 +124,6 @@ document.querySelector('.again').addEventListener('click', function () {
   // Generate a new random number
   num = randomNumber();
 
-  // console.log(num); // Remove -- for testing only!
-
   // Reset message to starting message
   displayMessage(startMessage);
 
@@ -141,10 +134,8 @@ document.querySelector('.again').addEventListener('click', function () {
   setValue('.guess', '');
 
   // Reset background color to #222
-  // document.querySelector('body').style.backgroundColor = '#222';
   setBackgroundColor('body', '#222');
 
   // Reset size of number box
-  // document.querySelector('.number').style.width = '15rem';
   setWidth('.number', '15rem');
 });
